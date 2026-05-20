@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom prose style for description */
+.prose-custom {
+  @apply text-xs leading-relaxed text-slate-600;
+}
+.prose-custom p {
+  @apply mb-2 last:mb-0;
+}
+.prose-custom ul {
+  @apply list-disc pl-4 mb-2 last:mb-0 space-y-0.5;
+}
+.prose-custom ol {
+  @apply list-decimal pl-4 mb-2 last:mb-0 space-y-0.5;
+}
+.prose-custom strong {
+  @apply font-semibold text-slate-800;
+}
+.prose-custom em {
+  @apply italic;
+}
+.prose-custom code {
+  @apply font-mono bg-slate-100 px-1 py-0.5 rounded text-[10px];
+}
+.prose-custom h1, .prose-custom h2, .prose-custom h3, .prose-custom h4 {
+  @apply font-semibold text-slate-800 tracking-tight mt-2 mb-1 first:mt-0;
+}
+.prose-custom h1 { @apply text-sm; }
+.prose-custom h2 { @apply text-xs; }
+.prose-custom h3 { @apply text-[11px]; }
